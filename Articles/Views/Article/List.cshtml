@@ -1,0 +1,23 @@
+@model List<Articles.Models.Article>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>articles</title>
+</head>
+<body>
+<div>
+    <h1>Articles</h1>
+    @foreach (var article in Model)
+    {
+        <h2>@article.Title</h2>
+        <p>@article.Contents</p>
+    }
+</div>
+</body>
+</html>

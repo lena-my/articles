@@ -2,9 +2,23 @@ using Articles.Models;
 
 namespace Articles.Repository;
 
-public class ArticleRepository
+public static class ArticleRepository
 {
-    private static List<Article> _articles = new List<Article>();
+    private static List<Article> _articles = new List<Article>()
+    {
+        new Article()
+        {
+            Id = 1,
+            Title = "Lorem ipsum dolor sit amet",
+            Contents = "Malesuada fames ac turpis egestas maecenas pharetra convallis posuere morbi. Ut tellus elementum sagittis vitae et. Dolor magna eget est lorem. Nulla facilisi etiam dignissim diam. Quis lectus nulla at volutpat diam. Eget sit amet tellus cras adipiscing enim. Fusce id velit ut tortor. Integer vitae justo eget magna. Sed lectus vestibulum mattis ullamcorper velit. "
+        },
+        new Article()
+        {
+            Id = 2,
+            Title = "Nulla pharetra diam sit amet nisl",
+            Contents = "Mauris pharetra et ultrices neque ornare. Turpis nunc eget lorem dolor. Malesuada proin libero nunc consequat. Pretium viverra suspendisse potenti nullam. Amet nulla facilisi morbi tempus iaculis. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Ornare arcu dui vivamus arcu felis bibendum ut tristique. "
+        }
+    };
 
     //CREATE
     public static void CreateArticle(string title, string contents)
